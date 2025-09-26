@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}All Meetups{% endblock title %}
+
+{% block content %}
+    <h1>All Meetups!</h1>
+    <p>Hello World!</p>
+
+    {% if show_meetups %}
+        {% for meetup_item in meetups %}
+            <h2>{{ meetup_item.title }}</h2>
+        {% endfor %}
+    {% endif %}
+{% endblock content %}
